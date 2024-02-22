@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "715477373463",
+    "project_id": "clone-d3eee",
+    "storage_bucket": "clone-d3eee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715477373463:android:1eeaf53400ad94e0df0252",
+        "android_client_info": {
+          "package_name": "shilpa.app.amazon_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpeNVyUkQKGjgi1UFV4aAbfszgCCXlAFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
