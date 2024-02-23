@@ -11,48 +11,24 @@ import 'dart:io' show Platform;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (kIsWeb) {
-    await Firebase.initializeApp(
-        options: const FirebaseOptions(
+  Platform.isAndroid
+      ? await Firebase.initializeApp(
+          options: const FirebaseOptions(
             apiKey: "AIzaSyADBr879w4U7R7lWe_NZjoeELTa4JhYGo0",
             authDomain: "clone-d3eee.firebaseapp.com",
             projectId: "clone-d3eee",
             storageBucket: "clone-d3eee.appspot.com",
             messagingSenderId: "715477373463",
             appId: "1:715477373463:web:d1ec0a9a8d9293f3df0252",
-            measurementId: "G-16RWLTWDK2"));
-  } else {
-    await Firebase.initializeApp();
-  }
+            measurementId: "G-16RWLTWDK2",
+          ),
+        )
+      : await Firebase.initializeApp();
   runApp(const AmazonClone());
 }
 
-// void main() async {
-//   //hello
-//     WidgetsFlutterBinding.ensureInitialized();
-//     Platform.isAndroid?
-//     await Firebase.initializeApp(
-//         options: const FirebaseOptions(
-//             apiKey: "AIzaSyADBr879w4U7R7lWe_NZjoeELTa4JhYGo0",
-//             authDomain: "clone-d3eee.firebaseapp.com",
-//             projectId: "clone-d3eee",
-//             storageBucket: "clone-d3eee.appspot.com",
-//             messagingSenderId: "715477373463",
-//             appId: "1:715477373463:web:d1ec0a9a8d9293f3df0252",
-//             measurementId: "G-16RWLTWDK2",
-//          ),
-//    )
-//    : await Firebase.initializeApp();
-//     runApp(const AmazonClone());
-// }
-
-
-
-
-
 class AmazonClone extends StatelessWidget {
   const AmazonClone({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -83,6 +59,3 @@ class AmazonClone extends StatelessWidget {
     );
   }
 }
-
-
-
